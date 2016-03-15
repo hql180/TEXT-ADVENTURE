@@ -12,5 +12,7 @@ public:
 
 protected:
 	MyString _name;
+	static int _G_ID;
+	int _ID;
 };
 

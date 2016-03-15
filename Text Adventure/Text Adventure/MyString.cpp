@@ -1,5 +1,6 @@
 #include "MyString.h"
 #include <iostream>
+#include <string> // Only used for std::getline()
 
 MyString::MyString()
 {
@@ -241,7 +242,7 @@ void MyString::SetString()
 {
 	std::string test;
 	std::getline(std::cin, test);
-	int length = MyStrlen(test);
+	int length = MyStrlen(test); //strlen(test);
 	char* temp = new char[length + 1];
 	for (int i = 0; i <= length; ++i)
 	{
