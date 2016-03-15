@@ -1,5 +1,5 @@
 #pragma once
-
+#include <string> // Only used for part (12) as storage and getline function
 
 
 class MyString

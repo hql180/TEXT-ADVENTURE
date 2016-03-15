@@ -97,7 +97,7 @@ int Notmain()
 {
 	//runTests();
 
-	MyString test;
+	
 
 	system("pause");
     return 0;
