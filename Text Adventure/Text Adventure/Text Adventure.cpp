@@ -1,7 +1,9 @@
 #include <iostream>
+#include <vector>
 
 #include "MyString.h"
 #include "Player.h"
+#include "Map.h"
 
 int main()
 {
@@ -12,11 +14,15 @@ int main()
 
 	// user input forward
 
-	// You walk forward through the tunnel untill you enter a large carvern with what appears to be 3 doors
+	// You walk forward through the tunnel until you enter a large carvern with what appears to be 3 doors
 
 	// user input
 
-	// 
+	std::vector<Map*> map;
+
+	map.push_back(new Map());
+	map.
+	
 
 	system("pause");
 	return 0;

@@ -5,5 +5,7 @@ class Room : public Map
 public:
 	Room();
 	virtual ~Room();
+protected:
+
 };
 
