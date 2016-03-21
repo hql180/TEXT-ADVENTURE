@@ -12,6 +12,10 @@ public:
 
 	void Update();
 
+	char* GetName();
+
+	MyString GetCommand();
+
 private:
 	MyString _name;
 	MyString _command;

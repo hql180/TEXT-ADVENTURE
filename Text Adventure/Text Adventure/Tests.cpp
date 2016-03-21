@@ -1,6 +1,7 @@
 #include <iostream>
-#include "MyString.h"
 #include <fstream>
+
+#include "MyString.h"
 
 using namespace std;
 
@@ -93,9 +94,9 @@ void runTests()
 	test.close();
 }
 
-int Notmain()
+int notmain()
 {
-	//runTests();
+	runTests();
 
 	
 

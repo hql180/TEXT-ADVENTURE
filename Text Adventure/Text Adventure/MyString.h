@@ -57,6 +57,10 @@ public:
 		
 	void PrintString();
 
+	bool operator == (char* compare);
+
+	bool operator == (MyString& compare);
+
 private:
 	char* _string;
 };

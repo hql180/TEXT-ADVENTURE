@@ -379,3 +379,27 @@ void MyString::PrintString()
 		std::cout << "Why are you trying to print a nullptr?" << std::endl;
 	}
 }
+
+bool MyString::operator==(char * compare)
+{
+	if (Strcmp(compare) == 0)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
+
+bool MyString::operator==(MyString & compare)
+{
+	if (Strcmp(compare) == 0)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}

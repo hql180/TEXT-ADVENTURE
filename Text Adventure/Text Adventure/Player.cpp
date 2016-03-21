@@ -10,7 +10,6 @@ Player::Player()
 	_name.SetString();
 }
 
-
 Player::~Player()
 {
 }
@@ -24,3 +23,18 @@ void Player::Update()
 {
 
 }
+
+char* Player::GetName()
+{
+	if (_name.GetString() != nullptr)
+	{
+		return _name.GetString();
+	}
+}
+
+MyString Player::GetCommand()
+{
+	return _command.ToLower();
+}
+
+

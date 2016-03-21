@@ -1,0 +1,15 @@
+Test 1	Length	Successful
+Test 2	CharAt	Successful
+Test 3	Strcmp	Successful
+Test 4	Append	Successful
+Test 5	Prepend	Successful
+Test 6	GetStr	Successful
+Test 7	ToLower	Successful
+Test 8	ToUpper	Successful
+Test 9	FindSub	Successful
+Test 10	FinSub2	Successful
+Test 11	ReplSub	Successful
+Test 12	ReplSub	Successful
+Test 13	CSInput	Successful
+Successful 100%
+
