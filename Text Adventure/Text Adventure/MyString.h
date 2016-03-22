@@ -1,5 +1,6 @@
 #pragma once
 #include <string> // Only used for part (12) as storage and getline function
+#include <iostream>
 
 
 class MyString
@@ -60,6 +61,10 @@ public:
 	bool operator == (char* compare);
 
 	bool operator == (MyString& compare);
+
+	friend std::istream& operator >> (std::istream& input, MyString& string);
+
+	
 
 private:
 	char* _string;

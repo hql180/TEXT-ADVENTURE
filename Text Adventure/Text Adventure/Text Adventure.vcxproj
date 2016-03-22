@@ -148,7 +148,9 @@
     <ClInclude Include="Map.h" />
     <ClInclude Include="MyString.h" />
     <ClInclude Include="Player.h" />
-    <ClInclude Include="Room.h" />
+    <ClInclude Include="QuestionPool.h" />
+    <ClInclude Include="RiddleRoom.h" />
+    <ClInclude Include="Stage1.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
@@ -156,10 +158,15 @@
     <ClCompile Include="Map.cpp" />
     <ClCompile Include="MyString.cpp" />
     <ClCompile Include="Player.cpp" />
-    <ClCompile Include="Room.cpp" />
+    <ClCompile Include="QuestionPool.cpp" />
+    <ClCompile Include="RiddleRoom.cpp" />
+    <ClCompile Include="Stage1.cpp" />
     <ClCompile Include="stdafx.cpp" />
     <ClCompile Include="Tests.cpp" />
     <ClCompile Include="Text Adventure.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
