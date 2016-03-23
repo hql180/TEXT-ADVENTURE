@@ -13,5 +13,6 @@ public:
 
 private:
 	bool _gotKey = false;
+	QuestionPool riddle;
 };
 

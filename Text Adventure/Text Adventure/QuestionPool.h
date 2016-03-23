@@ -21,6 +21,8 @@ public:
 
 	bool CheckSolved();
 
+	char* GetQuestion();
+
 	void Print();
 
 private:

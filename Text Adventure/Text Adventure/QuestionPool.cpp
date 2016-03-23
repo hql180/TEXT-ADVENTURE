@@ -3,7 +3,7 @@
 
 QuestionPool::QuestionPool()
 {
-	int moreRand = rand() % 3 + 1; // get random number 1-3
+	int moreRand = rand() % 4 + 1; // get random number 1-3
 	int randQuestion;
 
 	for (int i = 0; i <= moreRand; ++i)
@@ -125,6 +125,9 @@ void QuestionPool::QuestionList(int choice)
 	}
 }
 
+MyString test;
+
+
 bool QuestionPool::CheckAnswer(MyString userAnswer)
 {
 	MyString answer = userAnswer.ToLower();
@@ -152,6 +155,11 @@ bool QuestionPool::CheckAnswer(MyString userAnswer)
 bool QuestionPool::CheckSolved()
 {
 	return _solved;
+}
+
+char* QuestionPool::GetQuestion()
+{
+	return _question->GetString();
 }
 
 

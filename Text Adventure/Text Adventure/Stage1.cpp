@@ -81,6 +81,11 @@ void Stage1::Run(int & currentMap)
 
 }
 
+void Stage1::ObtainKey()
+{
+	_keys++;
+}
+
 const int Stage1::CheckKeys()
 {
 	return _keys;

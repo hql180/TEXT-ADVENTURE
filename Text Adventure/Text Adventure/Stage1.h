@@ -12,6 +12,8 @@ public:
 protected:
 	virtual void Run(int& currentMap);
 
+	void ObtainKey();
+
 	const int CheckKeys();
 
 private:
