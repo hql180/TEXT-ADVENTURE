@@ -404,6 +404,21 @@ bool MyString::operator==(MyString & compare)
 	}
 }
 
+MyString & MyString::operator=(char * rhs)
+{
+	int newLength = strlen(rhs);
+	char* temp = new char[newLength + 1];
+	strcpy(temp, rhs);
+	temp[newLength] = '\0';
+	if (_string != nullptr)
+	{
+		delete[] _string;
+	}
+	_string = temp;
+
+	return *this;
+}
+
 
 std::istream & operator>>(std::istream & input, MyString & string)
 {

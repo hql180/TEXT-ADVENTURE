@@ -5,7 +5,7 @@
 
 #include "MyString.h"
 #include "QuestionPool.h"
-
+#include "Player.h"
 
 
 class Map
@@ -14,9 +14,11 @@ public:
 	Map();
 	virtual ~Map();
 
-	virtual void Run(int& currentMap);
+	virtual void Run(int& currentMap, Player& player);
 
+	int GetID();
 
+	void RequestCommand();
 
 protected:
 	MyString _name;

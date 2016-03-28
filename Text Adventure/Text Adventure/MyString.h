@@ -64,6 +64,7 @@ public:
 
 	friend std::istream& operator >> (std::istream& input, MyString& string);
 
+	MyString& operator = (char* rhs);
 	
 
 private:

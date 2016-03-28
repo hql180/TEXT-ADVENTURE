@@ -1,6 +1,6 @@
 #pragma once
 #include "Map.h"
-#include "Player.h"
+
 
 class Stage1 :
 	public Map
@@ -10,13 +10,13 @@ public:
 	virtual ~Stage1();
 
 protected:
-	virtual void Run(int& currentMap);
+	virtual void Run(int& currentMap, Player& player);
 
-	void ObtainKey();
+	virtual void ObtainKey();
 
-	const int CheckKeys();
+	int CheckKeys();
 
 private:
-	int _keys = 0;
+	static int _keys;
 };
 

@@ -145,6 +145,7 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Character.h" />
     <ClInclude Include="Map.h" />
     <ClInclude Include="MyString.h" />
     <ClInclude Include="Player.h" />
@@ -155,6 +156,7 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Character.cpp" />
     <ClCompile Include="Map.cpp" />
     <ClCompile Include="MyString.cpp" />
     <ClCompile Include="Player.cpp" />
