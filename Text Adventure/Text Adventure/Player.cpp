@@ -4,10 +4,11 @@
 
 
 
-Player::Player()
+Player::Player() : Character()
 {
 	std::cout << "Please input your name: ";
 	_name.SetString();
+	
 }
 
 Player::~Player()

@@ -25,5 +25,13 @@ protected:
 	MyString _command;
 	static int _G_ID;
 	int _ID;
+	
+	enum _mapName
+	{
+		STAGE1,
+		RIDDLE,
+		MATH,
+		STAGE2
+	};
 };
 

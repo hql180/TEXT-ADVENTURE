@@ -4,7 +4,7 @@
 
 QuestionPool::QuestionPool()
 {
-	GetRiddle();
+	SetRiddle();
 }
 
 QuestionPool::QuestionPool(int math)
@@ -154,7 +154,7 @@ void QuestionPool::MathList(int choice)
 	}
 }
 
-void QuestionPool::GetRiddle()
+void QuestionPool::SetRiddle()
 {
 	int moreRand = rand() % 3 + 1; // get random number 1-3
 	int randQuestion = 0;
@@ -170,29 +170,39 @@ void QuestionPool::GetRiddle()
 bool QuestionPool::CheckAnswer(MyString userAnswer)
 {
 	MyString answer = userAnswer.ToLower();
-	if (answer.GetString() == _mathAnswer.GetString())
+	if (_isMath)
 	{
-		_solved = true;
-		return true;
-	}
-	else if (answer.FindSubString(_answer->ToLower()) != -1)
-	{
-		_solved = true;
-		return true;
-	}
-	else if (_answer2 != nullptr && answer.FindSubString(_answer2->ToLower()) != -1)
-	{
-		_solved = true;
-		return true;
-	}
-	else if (_answer3 != nullptr && answer.FindSubString(_answer3->ToLower()) != -1)
-	{
-		_solved = true;
-		return true;
+		if (userAnswer.ToLower().FindSubString(_mathAnswer) != -1)
+		{
+			_solved = true;
+			return true;
+		}
+		else
+		{
+			return false;
+		}
 	}
 	else
 	{
-		return false;
+		if (answer.FindSubString(_answer->ToLower()) != -1)
+		{
+			_solved = true;
+			return true;
+		}
+		else if (_answer2 != nullptr && answer.FindSubString(_answer2->ToLower()) != -1)
+		{
+			_solved = true;
+			return true;
+		}
+		else if (_answer3 != nullptr && answer.FindSubString(_answer3->ToLower()) != -1)
+		{
+			_solved = true;
+			return true;
+		}
+		else
+		{
+			return false;
+		}
 	}
 }
 
@@ -220,4 +230,9 @@ void QuestionPool::Print()
 {
 	_question->PrintString();
 	_answer->PrintString();
+}
+
+void QuestionPool::PrintMath()
+{
+	std::cout << _mathAnswer.GetString();
 }

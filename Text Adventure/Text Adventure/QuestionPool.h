@@ -21,7 +21,7 @@ public:
 
 	void MathList(int choice);
 
-	void GetRiddle();
+	void SetRiddle();
 
 	bool CheckAnswer(MyString userAnswer);
 
@@ -32,6 +32,8 @@ public:
 	char* GetQuestion();
 
 	void Print();
+
+	void PrintMath();
 
 private:
 	MyString* _question = nullptr;

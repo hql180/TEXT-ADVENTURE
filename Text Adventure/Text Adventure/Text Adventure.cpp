@@ -9,6 +9,7 @@
 #include "RiddleRoom.h"
 #include "QuestionPool.h"
 #include "MathRoom.h"
+#include "Stage2.h"
 
 int main()
 {
@@ -16,19 +17,24 @@ int main()
 	
 	/*MyString test;
 
-	test = "is it working?";
+	test = "02497";
+
+	test.ToLower();
+
+	std::cout << strlen(test.GetString());
 
 	test.PrintString();
 
 	std::cout << rand() % 11;
-
-	system("pause");*/
+*/
+	system("pause");
 
 	std::vector<Map*> map;
 
 	map.push_back(new Stage1());
 	map.push_back(new RiddleRoom());
 	map.push_back(new MathRoom());
+	map.push_back(new Stage2());
 
 	Player player;
 

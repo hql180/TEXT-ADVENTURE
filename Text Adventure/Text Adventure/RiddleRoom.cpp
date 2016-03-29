@@ -34,7 +34,7 @@ void RiddleRoom::Run(int & currentMap, Player& player) // Came from stage1
 			else if (_command.ToLower() == "west" || _command.ToLower() == "w")
 			{
 				std::cout << "You exited the the eastern riddle room and return to the main room.\n";
-				currentMap = 0; // Moving back to stage1
+				currentMap = _mapName::STAGE1; // Moving back to stage1
 			}
 			else if (_command.ToLower() == "south" || _command.ToLower() == "s")
 			{

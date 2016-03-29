@@ -35,6 +35,7 @@ char* MyString::GetString()
 
 MyString MyString::ToLower()
 {
+	
 	int length = MyStrlen(_string);
 
 	MyString newString = *this;

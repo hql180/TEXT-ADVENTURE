@@ -1,8 +1,9 @@
 #pragma once
 
 #include "MyString.h"
+#include "Character.h"
 
-class Player
+class Player : public Character
 {
 public:
 	Player();
@@ -17,7 +18,6 @@ public:
 	MyString GetCommand();
 
 private:
-	MyString _name;
 	MyString _command;
 };
 

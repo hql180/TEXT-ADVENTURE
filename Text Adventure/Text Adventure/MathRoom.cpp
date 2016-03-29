@@ -23,6 +23,7 @@ void MathRoom::Run(int & currentMap, Player & player)
 			
 			//int answer;
 			std::cin >> _command;
+			_command.PrintString();
 			if (_mathQuestion.CheckAnswer(_command))
 			{
 				_solved = true;
@@ -62,8 +63,8 @@ void MathRoom::Run(int & currentMap, Player & player)
 		}
 		else if (_command.ToLower() == "e" || _command.ToLower() == "east")
 		{
-			std::cout << "You exit the weird maths room\m";
-			currentMap = 1; // Back to stage1
+			std::cout << "You exit the weird maths room\n";
+			currentMap = _mapName::STAGE1; // Back to stage1
 		}
 		else
 		{
@@ -75,5 +76,6 @@ void MathRoom::Run(int & currentMap, Player & player)
 void MathRoom::ObtainKey()
 {
 	Stage1::ObtainKey();
+	_gotKey = true;
 	std::cout << "You picked up the Steel Key\n";
 }

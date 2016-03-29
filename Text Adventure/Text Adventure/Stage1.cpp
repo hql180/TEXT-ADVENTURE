@@ -42,7 +42,7 @@ void Stage1::Run(int & currentMap, Player& player)
 				else if (_command.ToLower() == "east" || _command.ToLower() == "e")
 				{
 					std::cout << "You open the door to the East and enter.\n";
-					currentMap = 1; // To RiddleRoom
+					currentMap = _mapName::RIDDLE; // To RiddleRoom
 				}
 				else if (_command.ToLower() == "west" || _command.ToLower() == "w")
 				{
@@ -80,7 +80,8 @@ void Stage1::Run(int & currentMap, Player& player)
 	}
 	else
 	{
-		std::cin >> _command;
+		std::cout << "You are back in the main room with the 3 doors\n";
+		RequestCommand();
 		if (_command.ToLower() == "north" || _command.ToLower() == "n")
 		{
 			if (CheckKeys() < 2)
@@ -90,19 +91,19 @@ void Stage1::Run(int & currentMap, Player& player)
 			else
 			{
 				std::cout << "You used the key to unlock the door\n";
-				currentMap = 0;
+				currentMap = _mapName::STAGE2;
 				std::cout << "\n\nfixfixfix\n\n";
 			}
 		}
 		else if (_command.ToLower() == "east" || _command.ToLower() == "e")
 		{
 			std::cout << "You open the door to the East and enter.\n";
-			currentMap = 1; // To RiddleRoom
+			currentMap = _mapName::RIDDLE; // To RiddleRoom
 		}
 		else if (_command.ToLower() == "west" || _command.ToLower() == "w")
 		{
 			std::cout << "You use the Stone Key to unlock the door\n";
-			currentMap = 2; // To MathRoom
+			currentMap = _mapName::MATH; // To MathRoom
 		}
 		else if (_command.ToLower() == "south" || _command.ToLower() == "s")
 		{

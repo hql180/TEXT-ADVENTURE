@@ -9,9 +9,9 @@ public:
 	virtual ~Character();
 
 protected:
-
-private:
 	MyString _name;
-	int _health, _damage, _armour, _mana;
+	int _health, _damage, _armour, _mana, _exp;
+private:
+	
 };
 
