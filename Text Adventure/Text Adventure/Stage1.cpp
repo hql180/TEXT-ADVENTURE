@@ -46,7 +46,7 @@ void Stage1::Run(int & currentMap, Player& player)
 				}
 				else if (_command.ToLower() == "west" || _command.ToLower() == "w")
 				{
-					std::cout << "room1\n";
+					std::cout << "The door is locked looks like you need a key to open it\n";
 				}
 				else if (_command.ToLower() == "south" || _command.ToLower() == "s")
 				{
@@ -101,7 +101,8 @@ void Stage1::Run(int & currentMap, Player& player)
 		}
 		else if (_command.ToLower() == "west" || _command.ToLower() == "w")
 		{
-			std::cout << "room1\n";
+			std::cout << "You use the Stone Key to unlock the door\n";
+			currentMap = 2; // To MathRoom
 		}
 		else if (_command.ToLower() == "south" || _command.ToLower() == "s")
 		{

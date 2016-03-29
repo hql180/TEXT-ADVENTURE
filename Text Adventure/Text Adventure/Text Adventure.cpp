@@ -8,23 +8,27 @@
 #include "Stage1.h"
 #include "RiddleRoom.h"
 #include "QuestionPool.h"
+#include "MathRoom.h"
 
 int main()
 {
 	srand(NULL);	
 	
-	MyString test;
+	/*MyString test;
 
 	test = "is it working?";
 
 	test.PrintString();
 
-	system("pause");
-	
+	std::cout << rand() % 11;
+
+	system("pause");*/
+
 	std::vector<Map*> map;
 
 	map.push_back(new Stage1());
 	map.push_back(new RiddleRoom());
+	map.push_back(new MathRoom());
 
 	Player player;
 
@@ -36,7 +40,7 @@ int main()
 	while (true)
 	{
 		map[currentMap]->Run(currentMap, player);
-		currentMap = map[currentMap]->UpdateMap();
+		//currentMap = map[currentMap]->UpdateMap();
 	}
 	
 

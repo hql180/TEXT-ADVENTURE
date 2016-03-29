@@ -1,16 +1,23 @@
 #include "QuestionPool.h"
 
 
+
 QuestionPool::QuestionPool()
+{
+	GetRiddle();
+}
+
+QuestionPool::QuestionPool(int math)
 {
 	int moreRand = rand() % 4 + 1; // get random number 1-3
 	int randQuestion;
 
 	for (int i = 0; i <= moreRand; ++i)
 	{
-		randQuestion = rand() % _riddlePoolSize;
+		randQuestion = rand() % 3;
 	}
-	QuestionList(randQuestion);
+	MathList(randQuestion);
+	_isMath = true;
 }
 
 QuestionPool::~QuestionPool()
@@ -125,13 +132,50 @@ void QuestionPool::QuestionList(int choice)
 	}
 }
 
-MyString test;
+void QuestionPool::MathList(int choice)
+{
+	switch (choice)
+	{
+	case 0:
+		_mathQuestion = "5 x 3 + 3 = ?";
+		_mathAnswer = "18";
+		break;
+	case 1:
+		_mathQuestion = "If 10 people can do a piece of work in 5 days, working 2 hours a day, how long will 2 people take to do the same work, working 5 hours a day?";
+		_mathAnswer = "10";
+		break;
+	case 2:
+		_mathQuestion = "25, 24, 22, 19, 15, ? What number comes after 15?";
+		_mathAnswer = "10";
+		break;
+	default:
+		_mathQuestion = "What is 2 + 2 = ?";
+		_mathAnswer = "4";
+	}
+}
+
+void QuestionPool::GetRiddle()
+{
+	int moreRand = rand() % 3 + 1; // get random number 1-3
+	int randQuestion = 0;
+
+	for (int i = 0; i < 3; ++i)
+	{
+		randQuestion = rand() % 11;
+	}
+	QuestionList(randQuestion);
+}
 
 
 bool QuestionPool::CheckAnswer(MyString userAnswer)
 {
 	MyString answer = userAnswer.ToLower();
-	if (answer.FindSubString(_answer->ToLower()) != -1)
+	if (answer.GetString() == _mathAnswer.GetString())
+	{
+		_solved = true;
+		return true;
+	}
+	else if (answer.FindSubString(_answer->ToLower()) != -1)
 	{
 		_solved = true;
 		return true;
@@ -152,6 +196,7 @@ bool QuestionPool::CheckAnswer(MyString userAnswer)
 	}
 }
 
+
 bool QuestionPool::CheckSolved()
 {
 	return _solved;
@@ -159,7 +204,14 @@ bool QuestionPool::CheckSolved()
 
 char* QuestionPool::GetQuestion()
 {
-	return _question->GetString();
+	if (_isMath)
+	{
+		return _mathQuestion.GetString();
+	}
+	else
+	{
+		return _question->GetString();
+	}
 }
 
 
