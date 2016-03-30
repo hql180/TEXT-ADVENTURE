@@ -92,7 +92,6 @@ void Stage1::Run(int & currentMap, Player& player)
 			{
 				std::cout << "You used the key to unlock the door\n";
 				currentMap = _mapName::STAGE2;
-				std::cout << "\n\nfixfixfix\n\n";
 			}
 		}
 		else if (_command.ToLower() == "east" || _command.ToLower() == "e")

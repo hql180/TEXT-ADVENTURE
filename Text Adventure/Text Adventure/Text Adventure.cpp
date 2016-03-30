@@ -46,7 +46,6 @@ int main()
 	while (true)
 	{
 		map[currentMap]->Run(currentMap, player);
-		//currentMap = map[currentMap]->UpdateMap();
 	}
 	
 
