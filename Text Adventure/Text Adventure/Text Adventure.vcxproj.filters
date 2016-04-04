@@ -54,6 +54,24 @@
     <ClInclude Include="Enemy.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Lion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Gladiator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Maximus.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SnoopLion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Rat.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CrabPeople.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -93,6 +111,24 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Enemy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Lion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Gladiator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Maximus.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SnoopLion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Rat.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CrabPeople.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
