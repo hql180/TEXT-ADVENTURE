@@ -14,27 +14,10 @@ Player::~Player()
 {
 }
 
-void Player::InputCommand()
+void Player::Attack(std::vector<Character*> list, int targetOveride)
 {
-	_command.SetString();
+	Character::Attack(list, targetOveride);
 }
 
-void Player::Update()
-{
-
-}
-
-char* Player::GetName()
-{
-	if (_name.GetString() != nullptr)
-	{
-		return _name.GetString();
-	}
-}
-
-MyString Player::GetCommand()
-{
-	return _command.ToLower();
-}
 
 

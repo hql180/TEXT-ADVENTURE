@@ -9,13 +9,7 @@ public:
 	Player();
 	~Player();
 
-	void InputCommand();
-
-	void Update();
-
-	char* GetName();
-
-	MyString GetCommand();
+	virtual void Attack(std::vector<Character*> list, int targetOveride);
 
 private:
 	MyString _command;
