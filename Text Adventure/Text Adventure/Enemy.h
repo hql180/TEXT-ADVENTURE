@@ -6,6 +6,6 @@ public:
 	Enemy();
 	virtual ~Enemy();
 protected:
-
+	void AddModifier();
 };
 

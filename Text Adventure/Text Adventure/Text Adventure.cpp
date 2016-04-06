@@ -10,23 +10,21 @@
 #include "QuestionPool.h"
 #include "MathRoom.h"
 #include "Stage2.h"
+#include "Rat.h"
 
 int main()
 {
 	srand(NULL);	
 	
-	/*MyString test;
+	std::random_device rd;
+	std::mt19937 gen(rd());
+	std::uniform_int_distribution<> mod(0, 3);
+	
+	for (int i = 0; i < 20; ++i)
+	{
+		std::cout << mod(gen) << "\n";
+	}
 
-	test = "02497";
-
-	test.ToLower();
-
-	std::cout << strlen(test.GetString());
-
-	test.PrintString();
-
-	std::cout << rand() % 11;
-*/
 	system("pause");
 
 	std::vector<Map*> map;

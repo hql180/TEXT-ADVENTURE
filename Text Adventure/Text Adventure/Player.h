@@ -11,7 +11,11 @@ public:
 
 	virtual void Attack(std::vector<Character*> list, int targetOveride);
 
+	virtual void GainExp(double target);
+
+	char* GetName();
+
 private:
-	MyString _command;
+	int _gold;
 };
 
